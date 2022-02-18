@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Timber</string>
+  <string name="send_log_file">Send Log File</string>
 </resources>

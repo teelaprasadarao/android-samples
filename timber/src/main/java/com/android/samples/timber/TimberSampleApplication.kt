@@ -1,6 +1,7 @@
 package com.android.samples.timber
 
 import android.app.Application
+import android.util.Log
 import timber.log.Timber
 import java.io.File
 
@@ -15,7 +16,9 @@ class TimberSampleApplication : Application() {
     Timber.plant(LogFileWriterTree(getLogFile()))
   }
 
-  private fun getLogFile(): File {
-    return File(getExternalFilesDir(null), "log_file.txt")
+  fun getLogFile(): File {
+    val file = File(getExternalFilesDir(null), "log_file.txt")
+    Log.i("", "Log file path = ${file.absolutePath}")
+    return file
   }
 }
